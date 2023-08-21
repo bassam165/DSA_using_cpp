@@ -4,10 +4,10 @@ int main() {
     int m;
     std::cin >> m;
     
-    if (m >= 2 && m % 2 == 0) {
-        std::cout << "YES\n"; // Tarrak can divide candies evenly
+    if (m >= 4 && m % 2 == 0) {
+        std::cout << "YES\n"; 
     } else {
-        std::cout << "NO\n"; // Tarrak can't divide candies evenly
+        std::cout << "NO\n"; 
     }
     
     return 0;
