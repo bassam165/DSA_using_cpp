@@ -13,5 +13,6 @@ void rotted(int arr[], int n, int k){
 int main()
 {
     int arr[4]={2,5,6,8};
+    
     rotted(arr,4,2);
 }
