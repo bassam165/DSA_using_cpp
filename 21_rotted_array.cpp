@@ -3,7 +3,7 @@ using namespace std;
 void rotted(int arr[], int n, int k){
     int temp[n];
     for(int i=0; i<n; i++){
-        temp[(i+k)%n]=arr[i];
+        temp[(i+k)%n]=arr[i]; //remainder will be 0 to 9 thats why this!
     }
     arr=temp;
     for(int j=0; j<n; j++){
