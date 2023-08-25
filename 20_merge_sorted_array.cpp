@@ -37,9 +37,14 @@ int main()
     int arr3[8] = {0};
 
     merge(arr1, 5, arr2, 3, arr3);
+<<<<<<< HEAD
 
     print(arr3, 8);
 
 
     return 0;
 }
+=======
+    print(arr3,8);
+}
+>>>>>>> 997ea6c7dcf7f690107f4ebb7f062d27a41f9aee
