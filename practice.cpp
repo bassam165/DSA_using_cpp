@@ -1,49 +1,52 @@
-#include<iostream>
-#include<vector>
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-void merge(int arr1[], int n, int arr2[], int m, int arr3[]) {
+// Function to find the next greater number
+string nextGreaterNumber(string num) {
+    int n = num.size();
+    int i = n - 2;
 
-    int i = 0, j = 0;
-    int k = 0;
-    while( i<n && j<m) {
-        if(arr1[i] < arr2[j]){
-            arr3[k++] = arr1[i++];
-        }
-        else{
-            arr3[k++] = arr2[j++];
-        }
+    // Find the first digit smaller than the digit to its right
+    while (i >= 0 && num[i] >= num[i + 1]) {
+        i--;
     }
 
-    //copy first array k element ko
-    while(i<n) {
-        arr3[k++] = arr1[i++];
+    if (i == -1) {
+        // No such digit found, impossible to create a greater number
+        return "-1";
     }
 
-    //copy kardo second array k remaining element ko
-    while(j<m) {
-        arr3[k++] = arr2[j++];
+    // Find the smallest digit to the right of digit1 that is greater than digit1
+    int j = n - 1;
+    while (num[j] <= num[i]) {
+        j--;
     }
-}
 
-void print(int ans[], int n) {
-    for(int i=0; i<n; i++) {
-        cout<< ans[i] <<" ";
-    }
-    cout << endl;
+    // Swap digit1 and digit3
+    swap(num[i], num[j]);
+
+    // Sort all the digits to the right of digit1
+    reverse(num.begin() + i + 1, num.end());
+
+    return num;
 }
 
 int main() {
+    int t;
+    cin >> t;
 
-    int arr1[5] = {1,3,5,7,9};
-    int arr2[3] = {2,4,6};
+    while (t--) {
+        int n;
+        cin >> n;
+        string num;
+        cin >> num;
 
-    int arr3[8] = {0};
-
-    merge(arr1, 5, arr2, 3, arr3);
-
-    print(arr3, 8);
-
+        string result = nextGreaterNumber(num);
+        cout << result << endl;
+    }
 
     return 0;
 }
