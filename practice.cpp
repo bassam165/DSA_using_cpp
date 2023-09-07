@@ -11,6 +11,7 @@ void rowsum(int arr[][3], int row, int col){
     }
     cout<<endl;
 }
+
 int main()
 {
     int arr[3][3]={{3,4,11},
