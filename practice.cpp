@@ -7,7 +7,6 @@ void rowsum(int arr[][3], int row, int col){
         for(int row=0; row<3; row++){
             sum +=arr[row][col];
         }
-        
         cout<<sum<<" ";
     }
     cout<<endl;
