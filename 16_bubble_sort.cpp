@@ -12,6 +12,7 @@ void sort(int arr[], int n){
         break;
     }
     }  
+    
 }
 int main()
 {
