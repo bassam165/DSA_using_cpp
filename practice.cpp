@@ -1,15 +1,20 @@
 #include<iostream>
+#include<limits.h>
 using namespace std;
 
 void rowsum(int arr[][3], int row, int col){
+    int max= INT_MIN;
     for( int col=0; col<3; col++){
         int sum=0;
         for(int row=0; row<3; row++){
             sum +=arr[row][col];
         }
-        cout<<sum<<" ";
+        
+        if(sum>max){
+            max=sum;
+        }
     }
-    cout<<endl;
+    cout<<max;
 }
 int main()
 {
