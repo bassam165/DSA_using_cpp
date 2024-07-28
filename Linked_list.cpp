@@ -34,8 +34,7 @@ int main()
     Node* node1 = new Node(10);
     cout<< node1 -> data << endl;
     cout<< node1 -> next << endl;
-    
-    //node pinted
+
     Node* head = node1;
     print(head);
     insertAtHead(head, 12);
