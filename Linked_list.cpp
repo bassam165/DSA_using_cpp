@@ -35,6 +35,7 @@ int main()
     cout<< node1 -> data << endl;
     cout<< node1 -> next << endl;
 
+    
     Node* head = node1;
     print(head);
     insertAtHead(head, 12);
