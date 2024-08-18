@@ -11,7 +11,6 @@ int main()
     while (c!=r)
     {
         cout << "Error! column of first matrix not equal to row of second.";
-
         cout << "Enter rows and columns for first matrix: ";
         cin >> r >> c;
     }
