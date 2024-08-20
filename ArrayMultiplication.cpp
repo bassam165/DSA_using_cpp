@@ -5,13 +5,13 @@ int main()
 {
     int a[10][10], b[10][10], mul[10][10], r, c, i, j , k;
     
-    cout << "enter row and collum number first mattrix: ";
+    cout << "enter row and collum number first matrix: ";
     cin >> r >> c;
 
     while (c!=r)
     {
         cout << "Error! column of first matrix not equal to row of second.";
-        cout << "Enter rows and columns for first matrix: ";
+        cout << "Enter rows and columns for the first matrix: ";
         cin >> r >> c;
     }
     
@@ -23,7 +23,7 @@ int main()
         }
     }
     
-    //input for secnod array
+    //input for second array
     cout << "Enter secnod array element: ";
     for(i=0; i<r; i++){
         for(j=0; j<c; j++){
