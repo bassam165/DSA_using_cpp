@@ -36,12 +36,30 @@ void selectionSort(int arr[], int n){
     cout<<endl;
 }
 
+void insertionSort(int arr[], int n){
+    for(int i=1; i<n-1; i++){
+        int cur = arr[i];
+        int prev = i - 1;
+        while(prev>=0 && arr[prev]>cur){
+            arr[prev+1] = arr[prev];
+            prev--;
+        }
+        arr[prev+1] = cur;
+    }
+     //printing
+    cout<<"Insertion sort: ";
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
 int main()
 {
     int arr[] = {4, 8, 9, 2, 1, 3};
     int n = sizeof(arr)/sizeof(arr[0]);
     bubbleSort(arr, n);
     selectionSort(arr, n);
-
+    insertionSort(arr, n);
     return 0;
 }
