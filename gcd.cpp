@@ -17,3 +17,4 @@ int main()
     cout<<gcd(20,28);
     return 0;
 }
+
